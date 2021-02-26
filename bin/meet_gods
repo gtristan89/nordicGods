@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+require_relative '../lib/environment.rb'
+
+# CLI.new
+# God.new
+# Scraper.new
+
+Scraper.get_gods
