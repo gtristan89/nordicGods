@@ -11,3 +11,4 @@ gem "rubocop", "~> 0.80"
 
 gem 'pry'
 gem 'nokogiri'
+gem 'nordicGod'
