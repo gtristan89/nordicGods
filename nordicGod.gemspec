@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Tristan Gibbs"]
   spec.email         = ["gtristan89@gmail.com"]
 
-  spec.summary       = "TODO: Write a short summary, because RubyGems requires one."
-  spec.description   = "TODO: Write a longer description or delete this line."
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = "Allow Mimir(the God of knowledge and wisdom) to guide you through the knowledge of Major Aesir Gods."
+  spec.description   = "Mimir will greet the user with a short history of himself which will explain to the user why he is guiding the user through the information. Once the user selects one of the 24 Aesir Gods the they will be given basic information about that God."
+  spec.homepage      = "HTTPS://maybelater.com"
   spec.license       = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
 

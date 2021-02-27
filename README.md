@@ -1,6 +1,6 @@
 # NordicGod
 
-Learn about the old Gods of Nordic Mythology!!
+Learn about the Aesir Gods of Nordic Mythology!!
 
 ## Installation
 

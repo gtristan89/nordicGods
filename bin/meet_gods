@@ -6,4 +6,7 @@ require_relative '../lib/environment.rb'
 # God.new
 # Scraper.new
 
+NordicGod::CLI.new.call
+NordicGod::CLI.new.get_listed_gods
+
 Scraper.get_gods

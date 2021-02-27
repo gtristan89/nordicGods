@@ -9,7 +9,6 @@ class Scraper
         @@doc = Nokogiri::HTML(open("https://www.ranker.com/list/all-norse-gods/ranker-characters")) 
 
         @@doc.css("li.gridItem_main__3gWq0").each do |card|
-            binding.pry
             god_obj = God.new
         end
     end
