@@ -10,7 +10,6 @@ class NordicGod::CLI
         get_listed_gods
         get_god
         get_info_for
-        # display_info
     end
 
     def get_listed_gods
@@ -28,14 +27,20 @@ class NordicGod::CLI
     end
 
     def get_info_for
-        chosen_god = gets.strip
-        binding.pry
+        chosen_god = gets.strip.to_i
         if valid_selection(chosen_god.to_i, @gods)
+            display_info_for(chosen_god)
         end
 
     end
 
     def valid_selection(selection, data)
         selection.to_i <= data.length &&  selection.to_i > 0
+    end
+
+    def display_info_for(chosen_god)
+        god = @gods[chosen_god - 1]
+        puts "great job!! youve chose #{god}"
+        binding.pry
     end
 end
