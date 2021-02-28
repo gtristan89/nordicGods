@@ -1,4 +1,4 @@
-class God
+class NordicGod::God
 
     attr_accessor :rank, :image, :name, :significance, :parent, :spouse, :offspring
 

@@ -14,7 +14,7 @@ class NordicGod::CLI
 
     def get_listed_gods
         # will be scraped
-        @gods = ['Thor', 'Odin', 'Fenrir', 'Ymir']
+        @gods = NordicGod::God.all_gods
     end
 
     def get_god
@@ -41,6 +41,5 @@ class NordicGod::CLI
     def display_info_for(chosen_god)
         god = @gods[chosen_god - 1]
         puts "great job!! youve chose #{god}"
-        binding.pry
     end
 end
