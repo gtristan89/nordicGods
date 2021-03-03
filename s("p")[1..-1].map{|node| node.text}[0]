@@ -1,0 +1,25 @@
+
+[1mFrom:[0m /home/tristan/Development/code/P1/project/nordicGod/lib/nordicGod/mimir.rb:16 Scraper.get_gods:
+
+     [1;34m9[0m: [32mdef[0m [1;36mself[0m.[1;34mget_gods[0m
+    [1;34m10[0m:     
+    [1;34m11[0m:     [36m@@doc[0m = [1;34;4mNokogiri[0m::HTML([1;34;4mURI[0m.open([31m[1;31m"[0m[31mhttps://www.ranker.com/list/all-norse-gods/ranker-characters[1;31m"[0m[31m[0m)) 
+    [1;34m12[0m: 
+    [1;34m13[0m:     
+    [1;34m14[0m:     [36m@@doc[0m.css([31m[1;31m"[0m[31mdiv.gridItem_itemData__1q79K[1;31m"[0m[31m[0m).each [32mdo[0m |card|
+    [1;34m15[0m:         [1;34m# print card[0m
+ => [1;34m16[0m:         binding.pry
+    [1;34m17[0m:         god_obj = [1;34;4mGod[0m.new
+    [1;34m18[0m:         [1;34m#img_link = card.css("img")[0]['src'][0m
+    [1;34m19[0m:         god_obj.name = card.css([31m[1;31m"[0m[31mh2[1;31m"[0m[31m[0m)[[1;34m0[0m].text
+    [1;34m20[0m:         [1;34m#puts "#{god_obj.name}"[0m
+    [1;34m21[0m:         god_obj.significance = card.css([31m[1;31m"[0m[31mp[1;31m"[0m[31m[0m)[[1;34m1[0m..[1;34m-1[0m].map{|node| node.text}[[1;34m0[0m]
+    [1;34m22[0m:         [1;34m#puts "#{god_obj.significance}"[0m
+    [1;34m23[0m:         god_obj.parent = card.css([31m[1;31m"[0m[31mp[1;31m"[0m[31m[0m)[[1;34m1[0m..[1;34m-1[0m].map{|node| node.text}[[1;34m1[0m]
+    [1;34m24[0m:         god_obj.spouse = card.css([31m[1;31m"[0m[31mp[1;31m"[0m[31m[0m)[[1;34m1[0m..[1;34m-1[0m].map{|node| node.text}[[1;34m2[0m]
+    [1;34m25[0m:         god_obj.offspring = card.css([31m[1;31m"[0m[31mp[1;31m"[0m[31m[0m)[[1;34m1[0m..[1;34m-1[0m].map{|node| node.text}[[1;34m3[0m]
+    [1;34m26[0m:         [1;34m#god_obj.img = img_link[0m
+    [1;34m27[0m:         
+    [1;34m28[0m:     [32mend[0m
+    [1;34m29[0m: [32mend[0m
+
