@@ -45,10 +45,12 @@ class CLI
     def self.display_info_for(selection)
         
         god = God.all_gods[selection - 1]
+
         puts "#{god.name}"
         #puts "#{name}"
         puts "#{god.significance}"
         puts "#{god.parent}"
+        puts "#{god.spouse}"
         puts "#{god.offspring}"
     end
 end
