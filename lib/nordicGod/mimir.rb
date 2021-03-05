@@ -19,17 +19,18 @@ class Scraper
             #img_link = card.css("img")[0]['src']
             god_obj.name = card.css("h2")[0].text
             
-            @@doc.css("div.gridItem_itemDescription__2YMhn.gridItem_blather__1_Z2Q]]").each do |card|
+            @@doc.css("div.gridItem_itemDescription__2YMhn.gridItem_blather__1_Z2Q").each do |subcard|
                 # god_obj = God.new
+                #binding.pry
             
-                god_obj.significance = card.css("p")[0].text
+                god_obj.significance = subcard.css("p")[0].text
                 #puts "#{god_obj.significance}"
-                god_obj.parent = card.css("p")[1].text
-                god_obj.spouse = card.css("p")[2].text
-                god_obj.offspring = card.css("p")[3].text
+                god_obj.parent = subcard.css("p")[1].text
+                god_obj.spouse = subcard.css("p")[2].text
+                god_obj.offspring = subcard.css("p")[3].text
                 #god_obj.img = img_link
             end
-            
+            #binding.pry
             #puts "#{god_obj.name}"
         end
 

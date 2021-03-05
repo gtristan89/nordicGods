@@ -35,6 +35,10 @@ class CLI
         chosen_god = gets.strip.to_i
         if valid_selection(chosen_god.to_i, @gods)
             display_info_for(chosen_god)
+        else 
+            puts "Ah you are unwise to reach beyond your means mortal please selecct from what I offer"
+            God.list_gods
+            get_info_for
         end    
     end    
 
@@ -43,8 +47,9 @@ class CLI
     end    
 
     def self.display_info_for(selection)
-        
+        #binding.pry
         god = God.all_gods[selection - 1]
+        #binding.pry
 
         puts "#{god.name}"
         #puts "#{name}"
