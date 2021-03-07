@@ -3,15 +3,15 @@ class CLI
     def self.call
         Scraper.get_gods
         puts "\nWelcome mortal! I am but a meer remnant of the Aesir God Mimir!\n"
-        #sleep 2
-        #puts "I am the God of knowledge and wisdom, the wisest God of all the Aesir."
-        #sleep 3
-        #puts "Long ago I was sent as a hostage during the Aesir Vanir  War. which is where I was beheaded. and then my head was sent back to Asgard."
-        #sleep 6
-        #puts "Odin carried my head for many centuries as I would recite secret knowledge and counsel to him."
-        #sleep 5
-        #puts "Now I offer my knowledge to you mortal."
-        #sleep 3
+        sleep 2
+        puts "I am the God of knowledge and wisdom, the wisest God of all the Aesir."
+        sleep 3
+        puts "Long ago I was sent as a hostage during the Aesir Vanir  War. which is where I was beheaded. and then my head was sent back to Asgard."
+        sleep 6
+        puts "Odin carried my head for many centuries as I would recite secret knowledge and counsel to him."
+        sleep 5
+        puts "Now I offer my knowledge to you mortal."
+        sleep 3
         user_begin
     end
 
@@ -30,8 +30,9 @@ class CLI
         if valid_selection(chosen_god.to_i, @gods)
             display_info_for(chosen_god)
         else 
-            puts "Ah you are unwise to reach beyond your means mortal, please selecct from what I offer"
-            God.list_gods
+            puts "\nAh you are unwise to reach beyond your means mortal, please selecct from what I offer\n"
+            sleep 2
+            user_begin
             get_info_for
         end    
     end    
@@ -68,15 +69,15 @@ class CLI
         input = gets.strip.downcase
         
         if input == "y"
-            puts "you must be trying to take my job mortal, haha"
+            puts "\nyou must be trying to take my job mortal, haha\n"
             sleep 2
             user_begin
         elsif input == "n" || input == "exit"
-            puts "Thank you for keeping me company mortal, return anytime."
+            puts "\nThank you for keeping me company mortal, return anytime.\n"
             sleep 2
             exit
         else
-            puts "Mortal it is unwise to stray from the path I have layed for you, please be more careful."
+            puts "\nMortal it is unwise to stray from the path I have layed for you, please be more careful.\n"
             sleep 1
             get_option
         end
