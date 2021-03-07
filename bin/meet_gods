@@ -2,10 +2,5 @@
 
 require_relative '../lib/environment.rb'
 
-# CLI.new
-# God.new
-# Scraper.new
 
 CLI.call
-
-# NordicGod::Scraper.get_gods

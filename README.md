@@ -20,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+To use this application run `./bin/meet_gods` then the program will begin with a brief description of the God Mimir. i designed this program around the idea that the user is communicating with the God of wisdom Mimir, which is cool i think because who else would you like to get information from? and i think it makes it more interactive if it feels like youre communicating with an actual being instead of just stepping through a program. but once its done with the brief background the program will put out a list of Gods for the user to select from. the user can only input a number between 1-64 anything else will cause "Mimir" to inform you that your selection is invalid and produce the list again. once youve made a valid selection "Mimir" will say something along the lines of acknowledging youve made a selection what "Mimir" says is different if you choose and even or odd number. then the program will put out very basic information about the god you have chosen and then will ask you if you would like to view another god or exit there are only 3 valid inputs from the user which are (y,n,exit) n and exit will do the same thing which will thank you for using the program and welcome you back anytime, using y will cause "Mimir" to make a mild joke and put out the list again for the user to select from.
 
 ## Development
 
