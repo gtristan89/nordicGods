@@ -3,15 +3,15 @@ class CLI
     def self.call
         Scraper.get_gods
         puts "\nWelcome mortal! I am but a meer remnant of the Aesir God Mimir!\n"
-        sleep 2
-        puts "I am the God of knowledge and wisdom, the wisest God of all the Aesir."
-        sleep 3
-        puts "Long ago I was sent as a hostage during the Aesir Vanir  War. which is where I was beheaded. and then my head was sent back to Asgard."
-        sleep 6
-        puts "Odin carried my head for many centuries as I would recite secret knowledge and counsel to him."
-        sleep 5
-        puts "Now I offer my knowledge to you mortal."
-        sleep 3
+        #sleep 2
+        #puts "I am the God of knowledge and wisdom, the wisest God of all the Aesir."
+        #sleep 3
+        #puts "Long ago I was sent as a hostage during the Aesir Vanir  War. which is where I was beheaded. and then my head was sent back to Asgard."
+        #sleep 6
+        #puts "Odin carried my head for many centuries as I would recite secret knowledge and counsel to him."
+        #sleep 5
+        #puts "Now I offer my knowledge to you mortal."
+        #sleep 3
         user_begin
     end
 
@@ -41,6 +41,7 @@ class CLI
     end    
 
     def self.display_info_for(selection)
+        puts ''
         god = God.all_gods[selection - 1]
         if selection.odd?
             puts "Ah yes #{god.name}, a fascinating choice"
@@ -54,7 +55,8 @@ class CLI
             puts "Group: #{god.group}"
             puts "God of: #{god.god_of}"
         end
-        self.get_option
+        sleep 1
+        get_option
     end
 
     def exit
@@ -68,7 +70,7 @@ class CLI
         if input == "y"
             puts "you must be trying to take my job mortal, haha"
             sleep 2
-            self.user_begin
+            user_begin
         elsif input == "n" || input == "exit"
             puts "Thank you for keeping me company mortal, return anytime."
             sleep 2
@@ -76,7 +78,7 @@ class CLI
         else
             puts "Mortal it is unwise to stray from the path I have layed for you, please be more careful."
             sleep 1
-            self.get_option
+            get_option
         end
     end
 end

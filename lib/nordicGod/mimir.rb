@@ -5,7 +5,6 @@ class Scraper
 
         @@doc.css("table tbody tr").each do |card|
             god_obj = God.new
-            #binding.pry
             god_obj.name = card.css("td")[0].text
             god_obj.gender = card.css("td")[1].text
             god_obj.group = card.css("td")[2].text
