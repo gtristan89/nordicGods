@@ -11,6 +11,7 @@ class CLI
         puts "Odin carried my head for many centuries as I would recite secret knowledge and counsel to him."
         sleep 5
         puts "Now I offer my knowledge to you mortal."
+        sleep 3
         user_begin
     end
 
