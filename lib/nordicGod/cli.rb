@@ -75,6 +75,11 @@ class CLI
         elsif input == "n" || input == "exit"
             puts "\nThank you for keeping me company mortal, return anytime.\n"
             sleep 2
+            puts "kunnusterr makt, ok makt er hvatvetna"
+            sleep 1
+            "KNOWLEDGE IS POWER, AND POWER IS EVERYTHING".each_char {|c| putc c ; sleep 0.25; $stdout.flush }
+            sleep 2
+            puts " "
             exit
         else
             puts "\nMortal it is unwise to stray from the path I have layed for you, please be more careful.\n"
