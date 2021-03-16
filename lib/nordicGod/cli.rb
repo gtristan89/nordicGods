@@ -77,7 +77,7 @@ class CLI
             sleep 2
             puts "kunnusterr makt, ok makt er hvatvetna"
             sleep 1
-            "KNOWLEDGE IS POWER, AND POWER IS EVERYTHING".each_char {|c| putc c ; sleep 0.25; $stdout.flush }
+            "KNOWLEDGE IS POWER, AND POWER IS EVERYTHING".each_char {|c| putc c ; sleep 0.15; $stdout.flush }
             sleep 2
             puts " "
             exit
