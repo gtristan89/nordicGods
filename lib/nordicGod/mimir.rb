@@ -1,6 +1,6 @@
 
 class Scraper
-    def self.get_gods
+    def get_gods
         @@doc = Nokogiri::HTML(URI.open("https://historylists.org/other/list-of-norse-gods-and-goddesses.html"))
 
         @@doc.css("table tbody tr").each do |card|

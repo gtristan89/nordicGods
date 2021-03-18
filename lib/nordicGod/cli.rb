@@ -1,7 +1,7 @@
 class CLI
     
     def self.call
-        Scraper.get_gods
+        Scraper.new.get_gods
         puts "\nWelcome mortal! I am but a meer remnant of the Aesir God Mimir!\n"
         sleep 2
         puts "I am the God of knowledge and wisdom, the wisest God of all the Aesir."
@@ -17,17 +17,22 @@ class CLI
 
     def self.user_begin
         
-        God.list_gods
+        self.list_gods
         puts "Please select a god with their corresponding number."
         get_info_for
         
+    end
+
+    def self.list_gods
+        puts ' '
+        God.all_gods.each.with_index { |obj, index| puts "#{index + 1}. #{obj.name}"}
     end
 
 
 
     def self.get_info_for
         chosen_god = gets.strip.to_i
-        if valid_selection(chosen_god.to_i, @gods)
+        if valid_selection(chosen_god.to_i)
             display_info_for(chosen_god)
         else 
             puts "\nAh you are unwise to reach beyond your means mortal, please selecct from what I offer\n"
@@ -37,7 +42,7 @@ class CLI
         end    
     end    
 
-    def self.valid_selection(selection, data)
+    def self.valid_selection(selection)
         selection.to_i <= 64 &&  selection.to_i > 0
     end    
 
